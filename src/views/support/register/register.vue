@@ -7,14 +7,17 @@
 
 <script>
 import {useRouter} from "vue-router";
+import {useStore} from "vuex";
 export default {
   setup() {
     const router = useRouter();
+    const store = useStore();
     const goto = () => {
       router.push({
         path: '/entry',
         query: {
-          lang: 'zh'
+          token: store.state.token,
+          lang: store.state.lang
         }
       })
     };

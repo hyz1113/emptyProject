@@ -37,13 +37,11 @@ const router = createRouter({
 const installEach = (context) => {
     if (isArray(context)) {
         context.forEach((item) => {
-            window.localStorage.enterPageTime = new Date();
             return router.beforeEach(item);
         });
     } else {
         if (Array.isArray(context.beforeEach)) {
             context.beforeEach.forEach((item) => {
-                window.localStorage.enterPageTime = new Date();
                 router.beforeEach(item);
             });
         }

@@ -13,6 +13,8 @@ const localDeal = [
       }).then(r => {
         next();
       });
+    } else {
+       console.log('没有登录');
     }
   },
 ];

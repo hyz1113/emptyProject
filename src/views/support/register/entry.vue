@@ -12,7 +12,7 @@
 import {getInfo} from "@/api/home"
 import {useStore} from 'vuex';
 import {computed, reactive, toRefs} from "vue";
-import {useRouter} from "vue-router";
+import {useRouter, useToute} from "vue-router";
 
 export default {
   setup() {
@@ -40,7 +40,11 @@ export default {
 
     const goto = () => {
       router.push({
-        path: '/home'
+        path: '/home',
+        query: {
+          token: store.state.token,
+          lang: store.state.lang
+        }
       })
     };
 
