@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <component v-if="layout" :is="layout" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import Default from '@/layout/Default.vue';
 
-export default {
+import {
+  defineComponent,
+  computed,
+} from 'vue';
+import { useRouter } from 'vue-router';
+
+export default defineComponent({
   name: 'App',
+  setup() {
+    const router = useRouter();
+    // const layout = computed(() => router.currentRoute.value.meta.layout);
+    const layout = Default;
+    return {
+      layout,
+    };
+  },
   components: {
     HelloWorld
   }
-}
+})
 </script>
 
 <style>

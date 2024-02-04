@@ -1,0 +1,91 @@
+/**
+ * 页面常用样式
+ */
+
+html,body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+// 常用间距
+@each $key in 5, 10, 15, 20, 30, 40, 50 {
+  .mt#{$key} {
+    margin-top: #{$key}px;
+  }
+
+  .mr#{$key} {
+    margin-right: #{$key}px;
+  }
+
+  .mb#{$key} {
+    margin-bottom: #{$key}px;
+  }
+
+  .ml#{$key} {
+    margin-left: #{$key}px;
+  }
+
+  .pt#{$key} {
+    padding-top: #{$key}px;
+  }
+
+  .pr#{$key} {
+    padding-right: #{$key}px;
+  }
+
+  .pb#{$key} {
+    padding-bottom: #{$key}px;
+  }
+
+  .pl#{$key} {
+    padding-left: #{$key}px;
+  }
+}
+
+
+// 单行截断
+.line-clamp1 {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+:root {
+  // 一级字体颜色
+  --color-text-primary: #f0f0f0;
+  // 二级字体颜色
+  --color-text-secondary: #a3a2a2;
+  // 三级字体颜色
+  --color-text-third: #636363;
+  // border
+  --color-border: #252525;
+  --background: #191818;
+}
+
+// v1.3 渐变边框
+.border-gradient {
+  border: 1px solid;
+  border-image: linear-gradient(to bottom right, #53ddcf, #e82323) 3 30;
+  clip-path: inset(0 round 2px);
+  position: relative;
+}
+
+// 文本不换行
+.txt-nowrap {
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.wp100 {
+  width: 100% !important;
+}
+.hp100 {
+  height: 100% !important;
+}

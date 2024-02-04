@@ -1,0 +1,50 @@
+@each $key in 1, 2, 3, 9 {
+    .text-ellipsis-#{$key} {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: #{$key};
+        -webkit-box-orient: vertical;
+    }
+}
+
+@mixin flex-align($v: flex-start, $h: flex-start) {
+    display: flex;
+    align-items: $h;
+    justify-content: $v;
+}
+
+@mixin w-h($w, $h, $br: 0) {
+    width: $w;
+    height: $h;
+    border-radius: $br;
+}
+
+@mixin f-s-color($fs, $color, $lh: $fs, $fw: normal) {
+    font-size: $fs;
+    color: $color;
+    font-weight: $fw;
+    line-height: $lh;
+}
+
+@mixin f-s-c-w($fs, $color, $fw: normal) {
+    font-size: $fs;
+    color: $color;
+    font-weight: $fw;
+}
+
+@mixin f-s-gradient($dg, $color1, $color2) {
+    background-image: linear-gradient($dg, $color1, $color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin bg-color($bg) {
+    background: $bg;
+}
+
+@mixin bg-img($url) {
+    display: inline-block;
+    background: url($url);
+    background-size: 100% 100%;
+}
