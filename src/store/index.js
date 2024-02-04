@@ -41,6 +41,7 @@ export const store = createStore({
                 token: val.token,
                 lang: val.lang,
                 user: val.user,
+                theme: val.theme === 1 ? 'dark' : 'light', // 主题
             };
         },
     })],

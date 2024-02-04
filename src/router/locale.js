@@ -5,17 +5,14 @@ import { store } from '@/store'
 const localDeal = [
   // 识别语言
   (to, from, next) => {
-    const { token, lang } = to.query;
-    if(token) {
-      store.dispatch('saveState', {
-        token,
-        lang,
-      }).then(r => {
-        next();
-      });
-    } else {
-       console.log('没有登录');
-    }
+    const { token, lang, theme } = to.query;
+    store.dispatch('saveState', {
+      token,
+      lang,
+      theme
+    }).then(r => {
+      next();
+    });
   },
 ];
 
