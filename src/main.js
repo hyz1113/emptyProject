@@ -1,9 +1,13 @@
 import {createApp} from 'vue';
 import App from './App.vue';
+// 1. 引入Vant 组件
 import {
   Button,
   Icon
 } from 'vant';
+// 2. 引入组件样式
+import 'vant/lib/index.css';
+
 import router from './router';
 import { store } from './store';
 import vconsole from '@/utils/vconsole';

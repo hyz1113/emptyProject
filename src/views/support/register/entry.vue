@@ -2,9 +2,9 @@
   <div class="container">
     <div>
       <div>用户：{{ userName }}</div>
-      <button class="btn btn-primary" @click="reqData">req</button>
-      <button class="btn btn-primary" @click="modifyAction">修改用户名</button>
-      <button class="btn btn-primary" @click="goto">页面跳转</button>
+      <van-button type="primary" @click="reqData">req</van-button>
+      <van-button type="success" @click="modifyAction">修改用户名</van-button>
+      <van-button type="default" @click="goto">页面跳转</van-button>
     </div>
   </div>
 </template>
