@@ -1,5 +1,5 @@
 module.exports = {
-  // publicPath: isPrd ? `http://localhost:${port}/` : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "./" : "/",
   devServer: {
     historyApiFallback: true,
     allowedHosts: "all",

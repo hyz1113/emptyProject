@@ -22,7 +22,7 @@ function isArray(context){
 }
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory(process.env.VUE_APP_API_URL),
     routes,
     scrollBehavior(to, from, savedPosition) {
         return new Promise((resolve) => {
