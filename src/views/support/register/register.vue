@@ -14,7 +14,7 @@ export default {
     const store = useStore();
     const goto = () => {
       router.push({
-        path: '/entry',
+        path: '/',
         query: {
           token: store.state.token,
           lang: store.state.lang

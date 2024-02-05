@@ -1,7 +1,7 @@
 
 const routes = [
   {
-    path: '/entry',
+    path: '/',
     component: () => import("@/views/support/register/entry.vue"),
     meta: {
       layout: 'Default',
