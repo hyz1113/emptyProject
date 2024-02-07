@@ -4,22 +4,39 @@
       <div>用户：{{ userName }}</div>
       <div>当前语言：{{ currentLang }}</div>
       <van-button
+        size="mini"
         type="primary"
         @click="reqData"
       >
-        req
+        请求接口
       </van-button>
       <van-button
+        size="mini"
+        type="success"
+        @click="modifyLang"
+      >
+        修改语言
+      </van-button>
+      <van-button
+        size="mini"
         type="success"
         @click="modifyAction"
       >
         修改用户名
       </van-button>
       <van-button
+        size="mini"
         type="default"
         @click="goto"
       >
         页面跳转
+      </van-button>
+      <van-button
+        size="mini"
+        type="default"
+        @click="link"
+      >
+        UI vant
       </van-button>
     </div>
   </div>
@@ -47,6 +64,10 @@ export default {
       store.dispatch('user/getAccount')
     }
 
+    const modifyLang = () => {
+      store.dispatch('saveState', { lang: 'th' })
+    }
+
     const reqData = async () => {
       await getInfo((res) => {})
         .then((res) => {
@@ -67,10 +88,16 @@ export default {
       })
     }
 
+    const link = () => {
+      window.location.href = 'https://vant-ui.github.io/vant/#/zh-CN';
+    }
+
     return {
       modifyAction,
       reqData,
       goto,
+      link,
+      modifyLang,
       ...toRefs(state)
     }
   }
