@@ -2,8 +2,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    commonjs: true,
-    es2016: true
+    commonjs: true
   },
   extends: ['plugin:vue/recommended'],
   rules: {
@@ -202,7 +201,6 @@ module.exports = {
     yoda: [2, 'never']
   },
   parserOptions: {
-    ecmaVersion: 2015,
     parser: '@babel/eslint-parser',
   },
 }
