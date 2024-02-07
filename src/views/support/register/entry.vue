@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <div>用户：{{ userName }}</div>
+      <div>当前语言：{{ currentLang }}</div>
       <van-button
         type="primary"
         @click="reqData"
@@ -32,12 +33,14 @@ import { useRouter } from 'vue-router'
 export default {
   setup () {
     let state = reactive({
-      userName: ''
+      userName: '',
+      currentLang: 'en',
     })
     const store = useStore()
     const router = useRouter()
-    state.userName = computed(() => store.state.user.userName)
-    console.log(`userName=====${state.userName}`)
+    state.userName = computed(() => store.state.user.userName);
+    state.currentLang = computed(() => store.state.lang);
+    console.log(`userName=====${state.userName}`);
 
     const modifyAction = () => {
       store.commit('user/setState', { userName: '李四' })
