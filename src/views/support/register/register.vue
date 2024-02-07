@@ -1,7 +1,11 @@
 <template>
   <div class="container register-container">
     我是第二个页面
-    <button @click="goto">跳到第一个页面</button>
+    <button
+      @click="goto"
+    >
+      跳到第一个页面
+    </button>
   </div>
 </template>
 

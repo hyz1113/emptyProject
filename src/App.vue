@@ -1,24 +1,23 @@
 <template>
-  <component v-if="layout" :is="layout" />
+  <component
+    :is="layout"
+  />
 </template>
 
 <script>
 import Default from '@/layout/Default.vue'
 
-import { defineComponent, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'App',
-  setup() {
-    const router = useRouter()
+  setup () {
+    // const router = useRouter()
     // const layout = computed(() => router.currentRoute.value.meta.layout);
     const layout = Default
     return {
       layout
     }
-  },
-  components: {
   }
 })
 </script>

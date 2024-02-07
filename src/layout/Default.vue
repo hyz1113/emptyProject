@@ -6,11 +6,10 @@
   </div>
 </template>
 <script>
-import { ref, onBeforeMount, defineComponent } from 'vue'
-import { getInfo } from '@/api/home'
+import { ref, defineComponent } from 'vue'
 
 export default defineComponent({
-  setup() {
+  setup () {
     const info = ref({})
     return {
       info

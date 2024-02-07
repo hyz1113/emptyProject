@@ -2,9 +2,24 @@
   <div class="container">
     <div>
       <div>用户：{{ userName }}</div>
-      <van-button type="primary" @click="reqData">req</van-button>
-      <van-button type="success" @click="modifyAction">修改用户名</van-button>
-      <van-button type="default" @click="goto">页面跳转</van-button>
+      <van-button
+        type="primary"
+        @click="reqData"
+      >
+        req
+      </van-button>
+      <van-button
+        type="success"
+        @click="modifyAction"
+      >
+        修改用户名
+      </van-button>
+      <van-button
+        type="default"
+        @click="goto"
+      >
+        页面跳转
+      </van-button>
     </div>
   </div>
 </template>
@@ -12,10 +27,10 @@
 import { getInfo } from '@/api/home'
 import { useStore } from 'vuex'
 import { computed, reactive, toRefs } from 'vue'
-import { useRouter, useToute } from 'vue-router'
+import { useRouter } from 'vue-router'
 
 export default {
-  setup() {
+  setup () {
     let state = reactive({
       userName: ''
     })
