@@ -3,7 +3,7 @@ const initState = {
   userToken: '',
   advertisingId: '',
   promoteId: '',
-  uuid: '',
+  uuid: ''
 }
 
-export default initState;
+export default initState

@@ -2,7 +2,8 @@
  * 页面常用样式
  */
 
-html,body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -45,7 +46,6 @@ html,body {
     padding-left: #{$key}px;
   }
 }
-
 
 // 单行截断
 .line-clamp1 {

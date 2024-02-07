@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import {useRouter} from "vue-router";
-import {useStore} from "vuex";
+import { useRouter } from 'vue-router'
+import { useStore } from 'vuex'
 export default {
-  setup() {
-    const router = useRouter();
-    const store = useStore();
+  setup () {
+    const router = useRouter()
+    const store = useStore()
     const goto = () => {
       router.push({
         path: '/',
@@ -20,13 +20,11 @@ export default {
           lang: store.state.lang
         }
       })
-    };
+    }
     return {
       goto
-    };
+    }
   }
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

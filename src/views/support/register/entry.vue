@@ -9,33 +9,34 @@
   </div>
 </template>
 <script>
-import {getInfo} from "@/api/home"
-import {useStore} from 'vuex';
-import {computed, reactive, toRefs} from "vue";
-import {useRouter, useToute} from "vue-router";
+import { getInfo } from '@/api/home'
+import { useStore } from 'vuex'
+import { computed, reactive, toRefs } from 'vue'
+import { useRouter, useToute } from 'vue-router'
 
 export default {
   setup() {
     let state = reactive({
       userName: ''
     })
-    const store = useStore();
-    const router = useRouter();
-    state.userName = computed(() => store.state.user.userName);
-    console.log(`userName=====${state.userName}`);
+    const store = useStore()
+    const router = useRouter()
+    state.userName = computed(() => store.state.user.userName)
+    console.log(`userName=====${state.userName}`)
 
     const modifyAction = () => {
-      store.commit('user/setState', {userName: '李四'});
+      store.commit('user/setState', { userName: '李四' })
       store.dispatch('user/getAccount')
-    };
+    }
 
     const reqData = async () => {
-      await getInfo(res => {
-      }).then(res => {
-        console.log(res);
-      }).catch(err => {
-        console.log(err);
-      });
+      await getInfo((res) => {})
+        .then((res) => {
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
 
     const goto = () => {
@@ -46,36 +47,33 @@ export default {
           lang: store.state.lang
         }
       })
-    };
+    }
 
     return {
       modifyAction,
       reqData,
       goto,
-        ...toRefs(state),
-    };
-  },
-};
+      ...toRefs(state)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .button-submit {
-  margin-top: 1.5rem
+  margin-top: 1.5rem;
 }
 
 .register-modal {
-
   h2 {
     font-family: Montserrat-Extra-Bold;
     font-size: 1.3rem;
     padding-top: 3rem;
   }
 
-
   p {
-    font-size: var(--font-12)
+    font-size: var(--font-12);
   }
-
 
   .button {
     position: fixed;
@@ -83,5 +81,4 @@ export default {
     left: 0;
   }
 }
-
 </style>

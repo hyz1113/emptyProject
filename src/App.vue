@@ -3,27 +3,22 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-import Default from '@/layout/Default.vue';
+import Default from '@/layout/Default.vue'
 
-import {
-  defineComponent,
-  computed,
-} from 'vue';
-import { useRouter } from 'vue-router';
+import { defineComponent, computed } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'App',
   setup() {
-    const router = useRouter();
+    const router = useRouter()
     // const layout = computed(() => router.currentRoute.value.meta.layout);
-    const layout = Default;
+    const layout = Default
     return {
-      layout,
-    };
+      layout
+    }
   },
   components: {
-    HelloWorld
   }
 })
 </script>
