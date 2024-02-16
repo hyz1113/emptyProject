@@ -4,6 +4,6 @@ const initState = {
   advertisingId: '',
   promoteId: '',
   uuid: ''
-}
+};
 
-export default initState
+export default initState;

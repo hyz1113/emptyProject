@@ -6,16 +6,16 @@
   </div>
 </template>
 <script>
-import { ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue';
 
 export default defineComponent({
   setup () {
-    const info = ref({})
+    const info = ref({});
     return {
       info
-    }
+    };
   }
-})
+});
 </script>
 <style>
 .main-layout {

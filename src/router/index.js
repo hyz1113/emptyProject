@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import rules from '@/config/routes'
-import routeLocale from './locale'
+import { createRouter, createWebHistory } from 'vue-router';
+import rules from '@/config/routes';
+import routeLocale from './locale';
 
-const routes = []
+const routes = [];
 
 rules.forEach((item) => {
   routes.push({
@@ -12,11 +12,11 @@ rules.forEach((item) => {
       layout: 'Default',
       ...item.meta
     }
-  })
-})
+  });
+});
 
 function isArray (context) {
-  return Array.isArray(context)
+  return Array.isArray(context);
 }
 
 const router = createRouter({
@@ -25,31 +25,31 @@ const router = createRouter({
   scrollBehavior (to, from, savedPosition) {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve({ top: 0, left: 0 })
-      }, 500)
-    })
+        resolve({ top: 0, left: 0 });
+      }, 500);
+    });
   }
-})
+});
 
 // 安装导航守卫
 const installEach = (context) => {
   if (isArray(context)) {
     context.forEach((item) => {
-      return router.beforeEach(item)
-    })
+      return router.beforeEach(item);
+    });
   } else {
     if (Array.isArray(context.beforeEach)) {
       context.beforeEach.forEach((item) => {
-        router.beforeEach(item)
-      })
+        router.beforeEach(item);
+      });
     }
 
     if (Array.isArray(context.afterEach)) {
-      context.afterEach.forEach((item) => router.afterEach(item))
+      context.afterEach.forEach((item) => router.afterEach(item));
     }
   }
-}
+};
 
-installEach(routeLocale)
+installEach(routeLocale);
 
-export default router
+export default router;

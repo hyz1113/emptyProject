@@ -1,33 +1,33 @@
-import createPersistedState from 'vuex-persistedstate'
-import { createStore } from 'vuex'
-import modules from './modules'
+import createPersistedState from 'vuex-persistedstate';
+import { createStore } from 'vuex';
+import modules from './modules';
 
 const state = {
   token: '',
   lang: ''
-}
+};
 const actions = {
   saveState: ({ commit, state }, data) => {
-    commit('SAVE_STATE', data)
+    commit('SAVE_STATE', data);
   },
   resetState: ({ commit }, data) => {
-    commit('RESET_STATE', data)
+    commit('RESET_STATE', data);
   }
-}
+};
 const mutations = {
   SAVE_STATE: (state, payload) => {
     Object.keys(payload).forEach((key) => {
       if (Object.prototype.hasOwnProperty.call(state, key)) {
-        state[key] = payload[key]
+        state[key] = payload[key];
       }
-    })
+    });
   },
   RESET_STATE: (state) => {
     Object.keys(state).forEach((key) => {
-      state[key] = state[key]
-    })
+      state[key] = state[key];
+    });
   }
-}
+};
 
 export const store = createStore({
   state,
@@ -43,8 +43,8 @@ export const store = createStore({
           lang: val.lang || 'en',
           user: val.user,
           theme: val.theme === 1 ? 'dark' : 'light' // 主题
-        }
+        };
       }
     })
   ]
-})
+});

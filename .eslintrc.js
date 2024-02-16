@@ -178,7 +178,7 @@ module.exports = {
     'quote-props': 0,
     quotes: [2, 'single', 'avoid-escape'],
     radix: 2,
-    semi: [2, 'never'],
+    semi: [2, 'always'],
     'semi-spacing': 0,
     'sort-vars': 0,
     'keyword-spacing': [2, {//强制在关键字前后使用一致的空格

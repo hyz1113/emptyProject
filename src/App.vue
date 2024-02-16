@@ -5,21 +5,21 @@
 </template>
 
 <script>
-import Default from '@/layout/Default.vue'
+import Default from '@/layout/Default.vue';
 
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'App',
   setup () {
     // const router = useRouter()
     // const layout = computed(() => router.currentRoute.value.meta.layout);
-    const layout = Default
+    const layout = Default;
     return {
       layout
-    }
+    };
   }
-})
+});
 </script>
 
 <style>

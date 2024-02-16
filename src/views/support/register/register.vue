@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import { useRouter } from 'vue-router'
-import { useStore } from 'vuex'
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
 export default {
   setup () {
-    const router = useRouter()
-    const store = useStore()
+    const router = useRouter();
+    const store = useStore();
     const goto = () => {
       router.push({
         path: '/starv3',
@@ -23,12 +23,12 @@ export default {
           token: store.state.token,
           lang: store.state.lang
         }
-      })
-    }
+      });
+    };
     return {
       goto
-    }
+    };
   }
-}
+};
 </script>
 <style lang="scss" scoped></style>

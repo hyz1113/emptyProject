@@ -42,41 +42,40 @@
   </div>
 </template>
 <script>
-import { getInfo } from '@/api/home'
-import { useStore } from 'vuex'
-import { computed, reactive, toRefs } from 'vue'
-import { useRouter } from 'vue-router'
+import { getInfo } from '@/api/home';
+import { useStore } from 'vuex';
+import { computed, reactive, toRefs } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default {
   setup () {
     let state = reactive({
       userName: '',
-      currentLang: 'en',
-    })
-    const store = useStore()
-    const router = useRouter()
+      currentLang: 'en'
+    });
+    const store = useStore();
+    const router = useRouter();
     state.userName = computed(() => store.state.user.userName);
     state.currentLang = computed(() => store.state.lang);
-    console.log(`userName=====${state.userName}`);
 
     const modifyAction = () => {
-      store.commit('user/setState', { userName: '李四' })
-      store.dispatch('user/getAccount')
-    }
+      store.commit('user/setState', { userName: '李四' });
+      store.dispatch('user/getAccount');
+    };
 
     const modifyLang = () => {
-      store.dispatch('saveState', { lang: 'th' })
-    }
+      store.dispatch('saveState', { lang: 'th' });
+    };
 
     const reqData = async () => {
       await getInfo((res) => {})
         .then((res) => {
-          console.log(res)
+          console.log(res);
         })
         .catch((err) => {
-          console.log(err)
-        })
-    }
+          console.log(err);
+        });
+    };
 
     const goto = () => {
       router.push({
@@ -85,12 +84,12 @@ export default {
           token: store.state.token,
           lang: store.state.lang
         }
-      })
-    }
+      });
+    };
 
     const link = () => {
       window.location.href = 'https://vant-ui.github.io/vant/#/zh-CN';
-    }
+    };
 
     return {
       modifyAction,
@@ -99,9 +98,9 @@ export default {
       link,
       modifyLang,
       ...toRefs(state)
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>

@@ -15,5 +15,5 @@ const routes = [
       name: '首页'
     }
   }
-]
-export default routes
+];
+export default routes;

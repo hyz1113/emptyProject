@@ -1,8 +1,8 @@
 
 const getters = {
   userInfo (state) {
-    return state.initState
+    return state.initState;
   }
-}
+};
 
-export default getters
+export default getters;
