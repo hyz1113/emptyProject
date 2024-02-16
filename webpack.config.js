@@ -36,6 +36,43 @@ module.exports = {
       {
         test: /\.vue$/,
         loader: 'vue-loader'
+      },
+      {
+        test: /\.?js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                'es2015',
+                {
+                  "modules": false
+                },
+                '@babel/preset-env',
+                {
+                  useBuiltIns: 'usage',
+                  corejs: 3,
+                  targets: {
+                    chrome: '58',
+                    firefox: '60',
+                    ie: '8',
+                    safari: '10',
+                    edge: '15'
+                  }
+                },
+                'stage-3',
+              ]
+            ],
+            plugins: [
+              '@babel/preset-env',
+              'babel-plugin-transform-runtime',
+              // plugin-proposal-class-properties 和 plugin-proposal-object-rest-spread 帮助生成符合规范的代码
+              '@babel/plugin-proposal-class-properties',
+              'babel-plugin-transform-object-rest-spread'
+            ]
+          }
+        },
+        include: [resolve('src'),resolve('node_modules/axios/*/**/*.js')]
       }
     ]
   },

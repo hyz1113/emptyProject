@@ -80,7 +80,7 @@ export default {
 
     const goto = () => {
       router.push({
-        path: '/home',
+        path: '/starv3/home',
         query: {
           token: store.state.token,
           lang: store.state.lang

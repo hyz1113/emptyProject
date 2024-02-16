@@ -18,11 +18,12 @@
   },
   "dependencies": {
     "@babel/cli": "^7.23.9",
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
-    "D": "^1.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/runtime": "^7.23.9",
+    "@babel/runtime-corejs3": "^7.23.9",
     "axios": "^1.6.7",
-    "core-js": "^3.8.3",
+    "babel-preset-es2015": "^7.0.0-beta.3",
+    "core-js": "^3.36.0",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.10",
     "echarts": "^5.4.3",
@@ -38,7 +39,11 @@
     "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.9",
     "@babel/eslint-parser": "^7.23.10",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
     "@babel/preset-stage-2": "^7.8.3",
     "@commitlint/cli": "^18.6.0",
     "@commitlint/config-conventional": "^18.6.0",
@@ -47,6 +52,10 @@
     "@vue/cli-service": "~5.0.0",
     "babel-loader": "^9.1.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.10.0",
@@ -56,10 +65,12 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-vue": "^8.0.3",
+    "html-webpack-plugin": "^5.6.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.1",
     "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^3.2.4",
+    "transform-runtime": "^0.0.0",
     "vconsole": "^3.15.1"
   },
   "eslintConfig": {
@@ -95,9 +106,10 @@
     }
   },
   "browserslist": [
-    "> 1%",
+    "> 0.1%",
     "last 2 versions",
     "not dead",
-    "not ie 11"
+    "not ie 11",
+    "ChromeAndroid 55"
   ]
 }

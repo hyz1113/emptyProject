@@ -7,7 +7,7 @@ const routes = []
 rules.forEach((item) => {
   routes.push({
     ...item,
-    path: item.path,
+    path: `/starv3/${item.path}`,
     meta: {
       layout: 'Default',
       ...item.meta
