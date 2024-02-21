@@ -20,6 +20,41 @@ h6,
   -ms-overflow-style: none; /* IE 10+ */
 }
 
+@font-face {
+  font-family: Montserrat-Light;
+  src: local("Montserrat-Light"), url("@/assets/fonts/Montserrat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: local("Montserrat-Regular"), url("@/assets/fonts/Montserrat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: local("Montserrat-SemiBold"), url("@/assets/fonts/Montserrat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: local("Montserrat-Bold"), url("@/assets/fonts/Montserrat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserrat-Extra-Bold;
+  src: local("Montserrat-Extra-Bold"), url("@/assets/fonts/Montserrat.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
 // 单行截断
 .line-clamp1 {
   display: block;

@@ -153,7 +153,7 @@ export default {
 
 .box{
   @include themeify {
-    background: themed('bg-color');
+    background: themed('bg-color-main');
   }
 }
 </style>

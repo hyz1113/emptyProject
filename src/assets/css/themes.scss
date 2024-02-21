@@ -2,18 +2,18 @@
 
 $lightTheme: (
   /*字体*/
-  font-size: $font-12,
-  font-color: $color-white,
+  font-size-12: $font-12,
+  font-color-gray: $color-white,
   /*颜色*/
-  bg-color: $bg-red
+  bg-color-main: $bg-red
 );
 
 $darkTheme: (
   /*字体*/
-  font-size: $font-12,
-  font-color: $color-gray,
+  font-size-12: $font-12,
+  font-color-gray: $color-gray,
   /*颜色*/
-  bg-color: $bg-dark
+  bg-color-main: $bg-dark
 );
 
 $themes: (
