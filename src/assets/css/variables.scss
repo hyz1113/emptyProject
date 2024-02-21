@@ -1,6 +1,7 @@
 // ----------------- 颜色
 $main-color: rgb(12, 166, 156); // 主色
-$color-white: rgb(255, 255, 255); // 白色
+$color-white: #fff; // 白色
+$color-red: red; // 红色
 $color-gray: rgb(147, 149, 154);
 $color-dark: rgb(13, 21, 32); //
 
@@ -23,6 +24,7 @@ $font-18: $size-18px;
 // ------------------ 背景色设置
 $bg-white: $color-white;
 $bg-dark: $color-dark;
+$bg-red: $color-red;
 
 
 

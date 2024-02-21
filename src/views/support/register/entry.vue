@@ -34,9 +34,17 @@
       <van-button
         size="mini"
         type="default"
-        @click="changeTheme"
+        @click="changeTheme('lightTheme')"
       >
-        切换主题
+        切换主题- light
+      </van-button>
+
+      <van-button
+          size="mini"
+          type="default"
+          @click="changeTheme('darkTheme')"
+      >
+        切换主题-- dark
       </van-button>
 
       <van-button
@@ -100,14 +108,11 @@ export default {
     };
 
 
-    //定义主题状态
-    let themeType = ref('$darkTheme');
     /**
      * 改变主题
      */
-    const changeTheme = () =>{
-      themeType.value = themeType.value == 'lightTheme'? 'lightTheme' : 'darkTheme'
-      document.getElementsByTagName('body')[0].setAttribute('data-theme',themeType.value)
+    const changeTheme = (theme) =>{
+      document.getElementsByTagName('body')[0].setAttribute('data-theme',theme)
     }
 
     return {
@@ -147,7 +152,7 @@ export default {
 }
 
 .box{
-  @include themeify{
+  @include themeify {
     background: themed('bg-color');
   }
 }
