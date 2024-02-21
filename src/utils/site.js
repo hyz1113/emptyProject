@@ -3,7 +3,7 @@
  *
  * @type {Array}
  */
-export const locales = ['en-us', 'zh-tw', 'in-id', 'th-th', 'vi-vn', 'ja-jp']
+export const locales = ['en-us', 'zh-tw', 'in-id', 'th-th', 'vi-vn', 'ja-jp'];
 
 export const localesList = [
   {
@@ -30,11 +30,11 @@ export const localesList = [
     name: 'vi-vn',
     value: 'Tiếng Việt'
   }
-]
+];
 
 /**
  * 默认语言
  *
  * @type {string}
  */
-export const locale = 'en-us'
+export const locale = 'en-us';
