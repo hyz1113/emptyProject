@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <div class="box">
       <div>用户：{{ userName }}</div>
       <div>当前语言：{{ currentLang }}</div>
       <van-button
@@ -34,6 +34,14 @@
       <van-button
         size="mini"
         type="default"
+        @click="changeTheme"
+      >
+        切换主题
+      </van-button>
+
+      <van-button
+        size="mini"
+        type="default"
         @click="link"
       >
         UI vant
@@ -44,7 +52,7 @@
 <script>
 import { getInfo } from '@/api/home';
 import { useStore } from 'vuex';
-import { computed, reactive, toRefs } from 'vue';
+import { computed, reactive, toRefs, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 export default {
@@ -91,12 +99,24 @@ export default {
       window.location.href = 'https://vant-ui.github.io/vant/#/zh-CN';
     };
 
+
+    //定义主题状态
+    let themeType = ref('$darkTheme');
+    /**
+     * 改变主题
+     */
+    const changeTheme = () =>{
+      themeType.value = themeType.value == 'lightTheme'? 'lightTheme' : 'darkTheme'
+      document.getElementsByTagName('body')[0].setAttribute('data-theme',themeType.value)
+    }
+
     return {
       modifyAction,
       reqData,
       goto,
       link,
       modifyLang,
+      changeTheme,
       ...toRefs(state)
     };
   }
@@ -123,6 +143,12 @@ export default {
     position: fixed;
     bottom: 2rem;
     left: 0;
+  }
+}
+
+.box{
+  @include themeify{
+    background: themed('bg-color');
   }
 }
 </style>

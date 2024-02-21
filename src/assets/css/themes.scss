@@ -1,0 +1,22 @@
+@import "variables";
+
+$lightTheme: (
+  /*字体*/
+  font-size: $font-12,
+  font-color: $color-white,
+  /*颜色*/
+  bg-color: $bg-white
+);
+
+$darkTheme: (
+  /*字体*/
+  font-size: $font-12,
+  font-color: $color-gray,
+  /*颜色*/
+  bg-color: $bg-dark
+);
+
+$themes: (
+  lightTheme: $lightTheme,
+  darkTheme: $darkTheme,
+);

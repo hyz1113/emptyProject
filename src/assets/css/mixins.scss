@@ -8,6 +8,41 @@
   }
 }
 
+// 常用间距
+@each $key in 5, 10, 15, 20, 30, 40, 50 {
+  .mt#{$key} {
+    margin-top: #{$key}px;
+  }
+
+  .mr#{$key} {
+    margin-right: #{$key}px;
+  }
+
+  .mb#{$key} {
+    margin-bottom: #{$key}px;
+  }
+
+  .ml#{$key} {
+    margin-left: #{$key}px;
+  }
+
+  .pt#{$key} {
+    padding-top: #{$key}px;
+  }
+
+  .pr#{$key} {
+    padding-right: #{$key}px;
+  }
+
+  .pb#{$key} {
+    padding-bottom: #{$key}px;
+  }
+
+  .pl#{$key} {
+    padding-left: #{$key}px;
+  }
+}
+
 @mixin flex-align($v: flex-start, $h: flex-start) {
   display: flex;
   align-items: $h;
