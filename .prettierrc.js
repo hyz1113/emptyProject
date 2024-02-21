@@ -2,7 +2,7 @@ module.exports = {
     // 行的字符数，如果超过会进行换行
     printWidth: 120,
     // 使用 4 个空格缩进
-    tabWidth: 4,
+    tabWidth: 2,
     // 不使用缩进符，而使用空格
     useTabs: false,
     // 句尾添加分号
